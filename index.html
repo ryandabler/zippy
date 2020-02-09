@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flashcards</title>
+        <link rel="stylesheet" href="./styles.css" />
+        <script src="./dom.js"></script>
+        <script src="./flashcard-learning.js"></script>
+    </head>
+
+    <body>
+        <div id="app">
+            <div id="flashcard-carousel">
+                <div id="score-bar" class="hidden">
+                    <button class="score-btn" data-score="0">0</button>
+                    <button class="score-btn" data-score="1">1</button>
+                    <button class="score-btn" data-score="2">2</button>
+                    <button class="score-btn" data-score="3">3</button>
+                    <button class="score-btn" data-score="4">4</button>
+                    <button class="score-btn" data-score="5">5</button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const DECK = [
+                { front: 'Femina', back: 'Woman' },
+                { front: 'Nauta', back: 'Sailor' },
+                { front: 'Puella', back: 'Girl' },
+                { front: 'Puer', back: 'Boy' },
+            ];
+
+            onEnter(DECK);
+        </script>
+    </body>
+</html>

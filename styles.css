@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    background-color: #6161c1;
+    color: #524e4e;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+}
+
+#flashcard-carousel .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+#flashcard-carousel .container.exit {
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translate(calc(-50% - 50px), -50%) !important;
+    opacity: 0;
+}
+
+#flashcard-carousel .container.queued {
+    transform: translate(calc(-50% + 50px), -50%) !important;
+    opacity: 0;
+}
+
+.flashcard {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    height: 150px;
+    justify-content: center;
+    position: relative;
+    transform-style: preserve-3d;
+    font-size: 32px;
+    border-radius: 3px;
+    transition: transform 0.3s;
+    width: 320px;
+}
+
+.flashcard [data-side] {
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.flashcard [data-side='back'] {
+    transform: rotateY(-180deg);
+}
+
+.flip-card {
+    animation: flipAnimation 0.3s;
+    transform: rotateY(-180deg);
+}
+
+#score-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+#score-bar.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.score-btn {
+    background: white;
+    border-radius: 3px;
+    color: inherit;
+    cursor: pointer;
+    font-size: 14px;
+    height: 32px;
+    outline: none;
+    transition: color 0.3s, background-color 0.3s;
+    width: 72px;
+}
+
+.score-btn:hover {
+    background-color: #e2e2e2;
+}
+
+@keyframes flipAnimation {
+    0% {
+        transform: translateY(0%) rotateY(0deg);
+    }
+    50% {
+        transform: translateY(-5%) rotateY(-90deg);
+    }
+    100% {
+        transform: translateY(0%) rotateY(-180deg);
+    }
+}
