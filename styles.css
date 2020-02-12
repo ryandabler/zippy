@@ -84,6 +84,7 @@ body {
 
 .score-btn {
     background: white;
+    border: none;
     border-radius: 3px;
     color: inherit;
     cursor: pointer;
