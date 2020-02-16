@@ -175,15 +175,15 @@ body {
     padding: 0;
 }
 
-#deck-list .deck {
+#deck-list .deck-item {
     padding: 24px 16px;
 }
 
-#deck-list .deck:hover {
+#deck-list .deck-item:hover {
     background-color: #f2f2f2;
 }
 
-#deck-list .deck:hover:last-child {
+#deck-list .deck-item:hover:last-child {
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
 }
