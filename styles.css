@@ -183,11 +183,6 @@ body {
     background-color: #f2f2f2;
 }
 
-#deck-list .deck:hover:first-child {
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-}
-
 #deck-list .deck:hover:last-child {
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
