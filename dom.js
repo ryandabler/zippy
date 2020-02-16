@@ -1,4 +1,4 @@
-const SELECTOR_PIECES = /(?:#|\.)?\w+|(\[.+?\])/g;
+const SELECTOR_PIECES = /(?:#|\.)?(?:\w(-\w)*)+|(\[.+?\])/g;
 
 const createElement = selector => {
     const [tagName, ...attributes] = selector.match(SELECTOR_PIECES);
