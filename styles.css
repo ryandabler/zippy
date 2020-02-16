@@ -17,6 +17,11 @@ body {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 #flashcard-carousel .container {
     position: absolute;
     top: 50%;
@@ -125,10 +130,10 @@ body {
 }
 
 .nav-bar .nav-item a {
-    color: inherit;
+    /* color: inherit; */
     display: inline-block;
     padding: 16px;
-    text-decoration: none;
+    /* text-decoration: none; */
 }
 
 .nav-bar .nav-item .decoration {
@@ -186,4 +191,8 @@ body {
 #deck-list .deck-item:hover:last-child {
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
+}
+
+#deck-list .deck-item a:hover {
+    text-decoration: underline;
 }

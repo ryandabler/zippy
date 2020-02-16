@@ -61,8 +61,10 @@
             ];
             const decks = document.getElementById('deck-list');
             DECKS.forEach(deck => {
-                el = createElement('li.deck-item');
-                el.innerText = deck.name;
+                const el = createElement('li.deck-item');
+                const a = createElement(`a[href="/decks/${deck.name}"]`);
+                a.innerText = deck.name;
+                el.appendChild(a);
                 decks.appendChild(el);
             });
         </script>
