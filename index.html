@@ -32,18 +32,39 @@
                     <button class="score-btn" data-score="4">4</button>
                     <button class="score-btn" data-score="5">5</button>
                 </div>
+            </div> -->
+            <div id="decks">
+                <h1>Decks (3)</h1>
+                <ul id="deck-list"></ul>
             </div>
         </div>
 
         <script>
-            const DECK = [
-                { front: 'Femina', back: 'Woman' },
-                { front: 'Nauta', back: 'Sailor' },
-                { front: 'Puella', back: 'Girl' },
-                { front: 'Puer', back: 'Boy' },
-            ];
+            // const DECK = [
+            //     { front: 'Femina', back: 'Woman' },
+            //     { front: 'Nauta', back: 'Sailor' },
+            //     { front: 'Puella', back: 'Girl' },
+            //     { front: 'Puer', back: 'Boy' },
+            // ];
 
-            onEnter(DECK);
+            // onEnter(DECK);
+            const DECKS = [
+                {
+                    name: 'German',
+                },
+                {
+                    name: 'French',
+                },
+                {
+                    name: 'Music Theory',
+                },
+            ];
+            const decks = document.getElementById('deck-list');
+            DECKS.forEach(deck => {
+                el = createElement('li.deck');
+                el.innerText = deck.name;
+                decks.appendChild(el);
+            });
         </script>
     </body>
 </html>
